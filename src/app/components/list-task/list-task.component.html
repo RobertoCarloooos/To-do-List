@@ -1,5 +1,7 @@
 <div class="box">
     <ul>
-        <app-task></app-task>
+        @for (item of listTask; track item) {
+        <app-task [tarea]="item"></app-task>
+        }
     </ul>
 </div>
