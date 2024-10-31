@@ -1,0 +1,32 @@
+
+div {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  div input[type="text"] {
+    flex: 1; /* Ocupa todo el ancho disponible */
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px; /* Bordes redondeados solo a la izquierda */
+  }
+  
+
+  div button {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-left: none; /* Elimina el borde izquierdo para que se conecte con el input */
+    background-color: #28a745; 
+    color: white; 
+    cursor: pointer;
+    border-radius: 0 5px 5px 0; /* Bordes redondeados solo a la derecha */
+  }
+  
+  /* Espaciado entre input y botón */
+  div input[type="text"] + button {
+    margin-left: 5px;
+  }
+  

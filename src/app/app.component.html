@@ -1,14 +1,18 @@
-<h1>Numero de tareas: {{numeroTareas}}</h1>
-<h2>Tareas finalizadas: {{tareasTerminadas}}</h2>
-
-@if (numeroTareas===tareasTerminadas) {
-  <h4 style="color: green;">Tareas completadas</h4>
-}
-@else {<h4 style="color: red;">Todavia te faltan tareas por completar</h4>}
-
-
-
-<app-input-task (onEnviarTarea)="tareaEnviada($event)"></app-input-task>
-<app-list-task (onCambiandoCheck)="checkCambiado($event)" (onEliminando)="eliminado($event)" [listTask]="listaTarea"></app-list-task>
-
-<router-outlet />
+<div class="app-container">
+    <div class="task-summary">
+      <h1>Número de tareas: {{numeroTareas}}</h1>
+      <h2>Tareas finalizadas: {{tareasTerminadas}}</h2>
+    </div>
+  
+    @if (numeroTareas === tareasTerminadas) {
+      <h4 class="completed">Tareas completadas</h4>
+    } @else {
+      <h4 class="pending">Todavía te faltan tareas por completar</h4>
+    }
+  
+    <app-input-task (onEnviarTarea)="tareaEnviada($event)"></app-input-task>
+    <app-list-task (onCambiandoCheck)="checkCambiado($event)" (onEliminando)="eliminado($event)" [listTask]="listaTarea"></app-list-task>
+  
+    <router-outlet></router-outlet>
+  </div>
+  

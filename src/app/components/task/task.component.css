@@ -1,0 +1,35 @@
+li {
+ 
+    padding: 10px;
+    border-bottom: 1px solid #000000; 
+
+  }
+
+/* Estilo para cada tarea */
+li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Flex para centrar el texto y mantener el botón a la derecha */
+  li span {
+    flex-grow: 1; /* Permite que el texto ocupe el espacio central */
+    text-align: center; /* Centra el texto en su espacio */
+  }
+  
+  /* Espaciado entre el checkbox y el texto */
+  li input {
+    margin-right: 10px;
+  }
+  
+  /* Estilo para el botón */
+  li button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #d9534f; /* Color rojo para el icono de basura */
+  }
+  

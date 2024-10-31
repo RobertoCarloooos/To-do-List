@@ -1,0 +1,60 @@
+
+
+/* Contenedor principal */
+.app-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  /* Contenedor para el resumen de tareas */
+  .task-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para el número de tareas y las tareas finalizadas */
+  .task-summary h1,
+  .task-summary h2 {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+  }
+  
+  /* Mensaje de estado */
+  h4 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  h4.completed {
+    color: green;
+  }
+  
+  h4.pending {
+    color: red;
+  }
+  
+  /* Estilo de los componentes */
+  app-input-task,
+  app-list-task {
+    display: block;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Estilo para la salida del enrutador */
+  router-outlet {
+    display: block;
+    margin-top: 20px;
+  }
+  
