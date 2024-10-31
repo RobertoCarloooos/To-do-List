@@ -15,6 +15,14 @@ export class AppComponent {
 
   listaTarea: Task[] = [{ text: 'hacer la colada', state: true }, { text: 'comprar pan', state: false }]
 
+  get numeroTareas(){
+    return( this.listaTarea.length)
+  }
+  
+  get tareasTerminadas(){
+    return(this.listaTarea.filter(tarea=> tarea.state===true).length)
+  }
+
 
   tareaEnviada(msg: string) {
     if (this.listaTarea.find(tarea => tarea.text === msg) === undefined) {
