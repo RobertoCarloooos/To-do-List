@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TaskComponent } from "../task/task.component";
 import { Task } from '../../interface/task';
 
@@ -11,5 +11,15 @@ import { Task } from '../../interface/task';
 })
 export class ListTaskComponent {
 
-  @Input() listTask! : Task []
+  @Input() listTask!: Task[]
+  @Output() onEliminando = new EventEmitter<Task>()
+  @Output() onCambiandoCheck = new EventEmitter<Task>()
+
+  eliminando(msg: Task) {
+    this.onEliminando.emit(msg)
+  }
+
+  cambiandoCheck(msg: Task) {
+    this.onCambiandoCheck.emit(msg)
+  }
 }

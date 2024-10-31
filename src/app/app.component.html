@@ -1,4 +1,4 @@
 <app-input-task (onEnviarTarea)="tareaEnviada($event)"></app-input-task>
-<app-list-task [listTask]="listaTarea"></app-list-task>
+<app-list-task (onCambiandoCheck)="checkCambiado($event)" (onEliminando)="eliminado($event)" [listTask]="listaTarea"></app-list-task>
 
 <router-outlet />

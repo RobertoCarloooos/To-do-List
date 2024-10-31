@@ -1,7 +1,7 @@
 <div class="box">
     <ul>
         @for (item of listTask; track item) {
-        <app-task [tarea]="item"></app-task>
+        <app-task (onCambiarCheck)="cambiandoCheck($event)" (onEliminar)="eliminando($event)" [tarea]="item"></app-task>
         }
     </ul>
 </div>

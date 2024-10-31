@@ -1,6 +1,6 @@
 
 <li>
-    <span>{{tarea.text}}</span>
-    <input type="checkbox" [checked]="tarea.state">
-    <button>​🗑️​</button>
+    <span [style]="{textDecoration: (tarea.state===true? 'line-through' : 'none')}">{{tarea.text}}</span>
+    <input (change)="cambiarCheck()" type="checkbox" [checked]="tarea.state">
+    <button (click)="eliminar()">​🗑️​</button>
 </li>

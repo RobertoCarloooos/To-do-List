@@ -13,11 +13,26 @@ import { Task } from './interface/task';
 })
 export class AppComponent {
 
-listaTarea: Task [] = [{text: 'hacer la colada',state: true},{text: 'comprar pan' , state: false}]
- 
+  listaTarea: Task[] = [{ text: 'hacer la colada', state: true }, { text: 'comprar pan', state: false }]
 
-tareaEnviada(msg: string){
-  if(this.listaTarea.find(tarea=> tarea.text===msg)===undefined){
-  this.listaTarea.push({text:msg, state: false})}
+
+  tareaEnviada(msg: string) {
+    if (this.listaTarea.find(tarea => tarea.text === msg) === undefined) {
+      this.listaTarea.push({ text: msg, state: false })
+    }
+  }
+
+  eliminado(msg: Task) {
+    const i = this.listaTarea.findIndex(tarea => tarea.text === msg.text)
+    this.listaTarea.splice(i, 1)
+  }
+
+  checkCambiado(msg: Task) {
+    for (const tarea of this.listaTarea) {
+      if (tarea.text === msg.text) {
+        tarea.state = !tarea.state
+      }
+    }
+  
 }
 }
