@@ -13,7 +13,7 @@ import { Task } from './interface/task';
 })
 export class AppComponent {
 
-  listaTarea: Task[] = [{ text: 'hacer la colada', state: true }, { text: 'comprar pan', state: false }]
+  listaTarea: Task[] = [{ text: 'ejemplo 1', state: false }, { text: 'ejemplo 2', state: true }]
 
   get numeroTareas(){
     return( this.listaTarea.length)
