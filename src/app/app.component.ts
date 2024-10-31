@@ -13,8 +13,11 @@ import { Task } from './interface/task';
 })
 export class AppComponent {
 
-
-
 listaTarea: Task [] = [{text: 'hacer la colada',state: true},{text: 'comprar pan' , state: false}]
  
+
+tareaEnviada(msg: string){
+  if(this.listaTarea.find(tarea=> tarea.text===msg)===undefined){
+  this.listaTarea.push({text:msg, state: false})}
+}
 }
